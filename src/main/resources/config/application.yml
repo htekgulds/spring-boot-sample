@@ -1,0 +1,24 @@
+logging:
+    level:
+        com.htds.spring.samples: DEBUG
+
+liquibase:
+    change-log: classpath:config/liquibase/master.xml
+    user: bootsample
+    password: 123
+
+spring:
+    datasource:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        url: jdbc:postgresql://localhost/bootsample
+        databaseName: bootsample
+        serverName: localhost
+        username: bootsample
+        password: 123
+
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQL82Dialect
+        database: POSTGRESQL
+        hibernate:
+            ddl-auto: none
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
