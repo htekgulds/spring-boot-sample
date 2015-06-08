@@ -31,7 +31,7 @@
         <maven.compile.source>${java.version}</maven.compile.source>
         <maven.compile.target>${java.version}</maven.compile.target>
         <javax.inject.version>1</javax.inject.version>
-        <liquibase.version>3.3.5</liquibase.version>
+        <liquibase.version>3.3.2</liquibase.version>
         <liquibase-hibernate4.version>3.5</liquibase-hibernate4.version>
         <spring.security.version>4.0.0.RELEASE</spring.security.version>
         <jfairy.version>0.4.3</jfairy.version>

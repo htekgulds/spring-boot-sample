@@ -3,6 +3,7 @@ package com.htds.spring.samples.domain;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * Created by Hasan
@@ -10,7 +11,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "T_AUTHORITY")
-public class Authroity {
+public class Authroity extends AbstractAuditingEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

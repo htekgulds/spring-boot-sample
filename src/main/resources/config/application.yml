@@ -20,5 +20,5 @@ spring:
         database-platform: org.hibernate.dialect.PostgreSQL82Dialect
         database: POSTGRESQL
         hibernate:
-            ddl-auto: none
+            ddl-auto: update
             naming-strategy: org.hibernate.cfg.EJB3NamingStrategy

@@ -1,11 +1,13 @@
 package com.htds.spring.samples.domain;
 
+import org.hibernate.envers.NotAudited;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * Created by Hasan
@@ -13,7 +15,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "T_USER")
-public class User {
+public class User extends AbstractAuditingEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +27,7 @@ public class User {
     @Column(length = 50, unique = true, nullable = false)
     private String login;
 
+	@NotAudited
     @NotNull
     @Size(min = 5, max = 100)
     @Column(name = "password_hash", length = 100)
